@@ -1,0 +1,34 @@
+map集合常用方法
+V put(K key, V value)   -- 用于将key和value组成一对放入当前集合中
+若实现增加功能则返回null，若实现修改功能则返回原来的value
+Boolean containsKey(Object key)---用于判断当前集合中是否存在参数指定的value
+V get(Object key)---用于根据参数指定的key返回对应的value，若key不存在则返回null。
+Boolean containsValue(Object value)---用于判断当前集合中是否存在参数指定的value。
+V remove(Object key)---用于根据参数指定的key来删除键值对，返回该key对应的value。
+Set<Map.Entry<K,V>> entrySet()---用于将map集合转换为set集合，集合中的每个元素都是键值对。        
+---其中Map.Entry是接口类型，常用方法有：
+     - K getKey() - 用于获取键值对中的键。
+     - V getValue() - 用于获取键值对中的值。                                                 
+Set<K> keySet() - 用于将Map集合中的所有键放入set集合中并返回。
+
+异常
+在java中主要指运行阶段发生的错误
+Java.lang.Throwable类是java语言中错误（Error类）和异常（Exception类）的超类。
+其中Error类主要描述比较严重通常无法解决的错误
+其中Exception类主要描述轻微可以编码解决的错误
+
+分类
+RuntimeException异常 - 运行时异常，也叫非检测性异常。
+IOException和其他异常 - 其他异常，也叫检测性异常（在编译阶段就会报错并给提示的异常）
+
+RuntimeException - 算数异常
+   ArithmeticException - 算数异常
+   ArrayIndexOutOfBoundsException - 数组下标越界异常
+   NullPointerException - 空指针异常
+   ClassCastException - 类型转换异常
+   NumberFormatException - 数字格式异常
+
+当程序执行过程中发生异常但没有手动处理时，由java虚拟机用默认方式（打印异常名称，原因，发生位置，并且终止程序）处理
+
+避免
+对大多数非检测性异常可以直接使用if条件判断来避免该异常的发生
