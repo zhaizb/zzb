@@ -1,0 +1,41 @@
+I/O流
+I/O就是Input/Output的简写，也就是输入/输出的含义
+I/O流就是指像水流一样不间断的进行读写数据的状态。
+
+分类（按照读写单位的不同）
+字节流 ：主要以字节为单位进行读写的过程，可以读写任意类型文件
+字符流 ： 主要以字符为单位进行读写的过程，只能读写文本文件（主要处理汉字）
+
+按照数据流动方向不同
+输入流 从文件中读取数据内容输入到程序中
+输出流 将程序中的数据内容输出到文件中，也就是写入文件
+
+基本框架
+字节流的顶层父类 
+InputStream类 （抽象类）
+常用子类
+	FileInputStream类、DateInputStream类、ObjectInputStream类
+OutputStream类（抽象类）
+常用子类
+	FileOutputStream类、DateOutputStream类、ObjectOutputStream类
+
+字符流的顶层父类
+Reader类
+常用子类
+BufferedReader类、InputStreamReader类
+Writer类
+常用子类
+BufferedWriter类、OutputStreamWriter类
+
+Java.io.PrintStream类是OutputStream类的间接子类。
+
+FileOutputStream类
+主要用于写入图像数据之类的原始字节流到输出流中
+
+常用方法
+FileOutputStream(String name) - 根据参数指定的文件夹名来构造对象
+FileOutputStreaam(String name, boolean append) - 以追加的方式根据文件名构造对象
+Void write(int b) - 用于将参数指定的单个字节写入输出流
+Void write(byte[] b, int off, int len) - 用于将数组b中从下标off开始的len个字节写入输入流
+Void write(byte[] b) - 用于将数组b中所有字节写入输出流
+Void close() - 用于关闭流并释放有关资源
