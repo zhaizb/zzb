@@ -1,0 +1,38 @@
+FileInputStream类
+主要用于从输入流中读取图像数据之类的字节流
+
+常用方法
+FileInputStream(String name) - 根据参数指定的文件名来构造对象
+Int read() - 用于读取单个字节（若读取到文件末尾则返回-1，否则返回读取到的数据内容）
+Int read(byte[] b, int off, int len) - 用于从输入流中读取len个字节的数据放入数组b下标为off开始的位置（若读取到文件末尾则返回-1，否则返回读取到的字节个数）
+Int read(byte[] b) - 用于从输入流中读取b.length个字节的数据放入数组b中
+Int available() - 用于获取该输入流所关联文件的大小
+Void close()
+
+DataOutputStream类
+将java基本数据类型的变量写入输出流中
+
+常用方法
+DataOutputStream(OutStream out) - 根据参数指定的引用构造对象（OutputStream类是抽象类，实参需要传递子类的对象）
+Void writeInt(int v) - 用于将参数指定的整数以四字节的方式写入输出流中，先写入高字节
+Void close()
+
+DataIntputStream类
+用于从输入流中读取java基本数据类型的内容
+
+常用方法
+DataInputStream(InStream in) - 根据参数指定的引用构造对象（InputStream类是抽象类，实参需要传递子类的对象）
+Void readInt() - 用于读取四个字节的整数数据并返回
+Void close()
+
+BufferWriter类
+用于写入单个字符，字符数组以及字符串到输出流中
+
+常用方法
+BufferedWriter(Writer out) - 根据参数指定的引用构造对象。（其中Writer类是给抽象类，因此需要实参传递子类的对象）
+Void write(int c) - 用于写入单个字符
+Void writer(char[] cbuf, int off, int len) - 用于将字符数组中cbuf中下标从off开始的len个字符写入输出流
+Void write(char[] cbuf) - 用于将字符数组cbuf中所有内容写入
+Void write(String str) - 用于将参数指定的字符串内容写入输出流
+Void newLine() - 用于写入行分隔符，不一定是\n字符
+Void close()
