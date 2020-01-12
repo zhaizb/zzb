@@ -1,0 +1,19 @@
+BufferReader类
+用于从输入流中读取单个字符，字符数组以及字符串
+
+常用方法
+BufferedReader(Reader in) - 根据参数指定的引用构造对象。（其中Reader类是给抽象类，因此需要实参传递子类的对象）
+int read() - 用于读取单个字符（读取到文件末尾返回-1，否则返回读取到的内容对应的整数值）
+int reader(char[] cbuf, int off, int len) - 用于将输入流的len个字符放入数组cbuf中下标从off开始的位置（若读取到文件末尾则返回-1，否则返回实际读取到的字符数）
+int reader(char[] cbuf) - 读取输入流中cbuf.lengrh个字符写入字符数组cbuf
+String readLine() - 用于从输入流中读取一行字符串的内容
+Void close()
+
+PrintStream类
+主要用于实现各种数据的打印并自动刷新
+
+常用方法
+PrintStream(OutputStream out) - 根据参数指定的引用制造对象。（OutputStream类是抽象类，实参需要传递子类对象）
+Void print(String s) - 用于打印参数指定的字符串内容
+Void println(String x) - 用于打印参数指定的字符串内容并终止该程序
+Void close()
